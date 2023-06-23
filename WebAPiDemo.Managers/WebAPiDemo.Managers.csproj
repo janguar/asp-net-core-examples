@@ -5,13 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="FluentValidation" Version="11.5.2" />
-    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.5.2" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\WebApiDemo.Entities\WebApiDemo.Entities.csproj" />
+    <ProjectReference Include="..\WebAPiDemo.Managers.Contracts\WebAPiDemo.Managers.Contracts.csproj" />
+    <ProjectReference Include="..\WebApiDemo.Repositories\WebApiDemo.Repositories.csproj" />
   </ItemGroup>
 
 </Project>
