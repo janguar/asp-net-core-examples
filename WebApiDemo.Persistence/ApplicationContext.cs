@@ -1,6 +1,5 @@
 ﻿
 using Microsoft.EntityFrameworkCore;
-using WebApiDemo.Entities;
 
 namespace WebApiDemo.Persistence
 {
@@ -10,7 +9,7 @@ namespace WebApiDemo.Persistence
         {
            
         }
-        public DbSet<ItemEntity> Items { get; set; }
+        //public DbSet<ItemEntity> Items { get; set; }
 
         public override void Dispose()
         {

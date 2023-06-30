@@ -9,7 +9,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\WebAPiDemo.Managers.Contracts\WebAPiDemo.Managers.Contracts.csproj" />
     <ProjectReference Include="..\WebApiDemo.Repositories\WebApiDemo.Repositories.csproj" />
   </ItemGroup>
 

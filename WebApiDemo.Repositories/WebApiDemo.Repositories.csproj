@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\WebApiDemo.Entities\WebApiDemo.Entities.csproj" />
+    <ProjectReference Include="..\WebApiDemo.Abstractions\WebApiDemo.Abstractions.csproj" />
     <ProjectReference Include="..\WebApiDemo.Persistence\WebApiDemo.Persistence.csproj" />
   </ItemGroup>
 

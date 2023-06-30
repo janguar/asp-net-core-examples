@@ -2,21 +2,22 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace WebApiDemo.DTO
+namespace WebApiDemo.Domain.Entities
 {
-    public class BaseEntityDto
+    public class BaseEntity 
     {
-        public DateTime CreatedAt
+         
+        public DateTime CreatedDate
         {
             get;
             set;
         }
-        public DateTime ModifiedAt
+        public DateTime ModifiedDate
         {
             get;
             set;
         }
-        public bool IsActiveEntity
+        public bool IsActive
         {
             get;
             set;

@@ -11,7 +11,7 @@ namespace WebApiDemo.Persistence
 {
     public static class PersistenceExtensions
     {
-        public static IServiceCollection AddDataContext(this IServiceCollection services)
+        public static IServiceCollection AddPersistence(this IServiceCollection services)
         {
             //services.AddDbContext<ApplicationContext>(options =>
             //options.UseSqlServer(
