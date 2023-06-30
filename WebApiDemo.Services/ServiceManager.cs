@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using WebApiDemo.Services.Abstraction;
-using WebAPiDemo.Domain.Repositories;
+﻿using WebApiDemo.Services.Abstraction;
 
 namespace WebApiDemo.Services
 {
@@ -12,10 +6,10 @@ namespace WebApiDemo.Services
     {
         private readonly Lazy<IItemService> _lazyOwnerService;
 
-        public ServiceManager(IRepositoryManager repositoryManager)
-        {
-            _lazyOwnerService = new Lazy<IItemService>(() => new ItemService(repositoryManager));
-        }
+        //public ServiceManager(IRepositoryManager repositoryManager)
+        //{
+        //    _lazyOwnerService = new Lazy<IItemService>(() => new ItemService(repositoryManager));
+        //}
 
         public IItemService OwnerService => _lazyOwnerService.Value;
 

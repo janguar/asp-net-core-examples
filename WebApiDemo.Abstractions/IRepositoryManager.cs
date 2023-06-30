@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
-namespace WebAPiDemo.Domain.Repositories;
+namespace WebApiDemo.Abstractions;
 public interface IRepositoryManager
 {
-    IItemRepository ItemRepository { get; }
+    IItemEntityRepository ItemRepository { get; }
 
-    IUnitOfWork UnitOfWork { get; }
+    IUnitOfWork UnitOfWork { get; } 
 }

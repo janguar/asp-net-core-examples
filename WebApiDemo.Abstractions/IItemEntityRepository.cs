@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using WebApiDemo.Domain.Entities;
+using WebAPiDemo.Entities;
 
-namespace WebAPiDemo.Domain.Repositories;
-public interface IItemRepository
+namespace WebApiDemo.Abstractions;
+public interface IItemEntityRepository
 {
     Task<IEnumerable<ItemEntity>> GetAllAsync(CancellationToken cancellationToken = default);
 
     Task<ItemEntity> GetByIdAsync(Guid ownerId, CancellationToken cancellationToken = default);
 
-    void Insert(ItemEntity owner);
+    Task InsertAsync(ItemEntity owner);
 
-    void Remove(ItemEntity owner);
+    Task RemoveAsync(ItemEntity owner);
 }

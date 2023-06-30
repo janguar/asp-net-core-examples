@@ -17,15 +17,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApiDemo.Persistence", "W
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApiDemo.Abstractions", "WebApiDemo.Abstractions\WebApiDemo.Abstractions.csproj", "{F82357BB-81DC-4F56-AC4F-8A560C5DDAA7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPiDemo.Domain", "WebAPiDemo.Managers\WebAPiDemo.Domain.csproj", "{19DB6232-B701-44CC-B5DE-452339476208}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPiDemo.Entities", "WebAPiDemo.Managers\WebAPiDemo.Entities.csproj", "{19DB6232-B701-44CC-B5DE-452339476208}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{B3E6739D-CC44-43F9-BEA9-571D3A124D3B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{767A6C7F-EC39-4B00-8925-71F43B40CDCA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiDemo.Services", "WebApiDemo.Services\WebApiDemo.Services.csproj", "{6AFA999E-3D14-4BC1-9508-D0C1C1F33515}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApiDemo.Services", "WebApiDemo.Services\WebApiDemo.Services.csproj", "{6AFA999E-3D14-4BC1-9508-D0C1C1F33515}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiDemo.Services.Abstraction", "WebApiDemo.Services.Abstraction\WebApiDemo.Services.Abstraction.csproj", "{D74F00E7-D2B3-4BFF-A88E-8D62923BFF61}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApiDemo.Services.Abstraction", "WebApiDemo.Services.Abstraction\WebApiDemo.Services.Abstraction.csproj", "{D74F00E7-D2B3-4BFF-A88E-8D62923BFF61}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -5,11 +5,11 @@ namespace WebApiDemo.Persistence
 {
     public class ApplicationContext : DbContext
     {
+        //public DbSet<ItemEntity> Items { get; set; }
         public ApplicationContext(DbContextOptions<ApplicationContext> options) : base(options)
         {
            
-        }
-        //public DbSet<ItemEntity> Items { get; set; }
+        } 
 
         public override void Dispose()
         {
