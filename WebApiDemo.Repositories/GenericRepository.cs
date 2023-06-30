@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using WebApiDemo.Abstractions;
+using WebApiDemo.Abstractions.Repository;
 using WebApiDemo.Persistence;
 
 namespace WebApiDemo.Repositories

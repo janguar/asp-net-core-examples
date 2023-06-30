@@ -7,8 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\WebApiDemo.Abstractions\WebApiDemo.Abstractions.csproj" />
     <ProjectReference Include="..\WebAPiDemo.Managers\WebAPiDemo.Entities.csproj" />
-    <ProjectReference Include="..\WebApiDemo.Services.Abstraction\WebApiDemo.Services.Abstraction.csproj" />
   </ItemGroup>
 
 </Project>

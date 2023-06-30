@@ -4,7 +4,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using WebAPiDemo.Entities;
 
-namespace WebApiDemo.Abstractions;
+namespace WebApiDemo.Abstractions.Repository;
 public interface IItemEntityRepository
 {
     Task<IEnumerable<ItemEntity>> GetAllAsync(CancellationToken cancellationToken = default);

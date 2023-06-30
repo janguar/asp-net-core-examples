@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq.Expressions;
 
-namespace WebApiDemo.Abstractions
+namespace WebApiDemo.Abstractions.Repository
 {
     public interface IGenericRepository<T> where T : class
     {

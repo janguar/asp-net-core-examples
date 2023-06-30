@@ -1,11 +1,12 @@
 ﻿
 using Microsoft.EntityFrameworkCore;
+using WebAPiDemo.Entities;
 
 namespace WebApiDemo.Persistence
 {
     public class ApplicationContext : DbContext
     {
-        //public DbSet<ItemEntity> Items { get; set; }
+        public DbSet<ItemEntity> Items { get; set; }
         public ApplicationContext(DbContextOptions<ApplicationContext> options) : base(options)
         {
            

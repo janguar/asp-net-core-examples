@@ -5,10 +5,10 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace WebApiDemo.Abstractions;
+namespace WebApiDemo.Abstractions.Repository;
 public interface IRepositoryManager
 {
     IItemEntityRepository ItemRepository { get; }
 
-    IUnitOfWork UnitOfWork { get; } 
+    IUnitOfWork UnitOfWork { get; }
 }

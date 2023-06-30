@@ -5,7 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\WebApiDemo.DTO\WebApiDemo.Dtos.csproj" />
     <ProjectReference Include="..\WebAPiDemo.Managers\WebAPiDemo.Entities.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Specifications\" />
+    <Folder Include="Services\" />
   </ItemGroup>
 
 </Project>

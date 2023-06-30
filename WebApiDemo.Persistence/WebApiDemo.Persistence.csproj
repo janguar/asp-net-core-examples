@@ -21,4 +21,9 @@
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\WebApiDemo.Abstractions\WebApiDemo.Abstractions.csproj" />
+    <ProjectReference Include="..\WebAPiDemo.Managers\WebAPiDemo.Entities.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebApiDemo</name>
+    </assembly>
+    <members>
+        <member name="T:WebApiDemo.Controllers.ValuesController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebApiDemo.Controllers.ValuesController.Test1(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WebApiDemo.Program">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebApiDemo.Program.Main(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+        </member>
+    </members>
+</doc>

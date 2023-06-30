@@ -1,8 +1,7 @@
 ﻿namespace WebAPiDemo.Entities
 {
-    public class ItemEntity
-    {
-        public int Id { get; set; }
+    public class ItemEntity: BaseEntity
+    { 
         public string Description { get; set; }
     }
 }

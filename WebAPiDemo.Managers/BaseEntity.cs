@@ -4,7 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WebApiDemo.Abstractions;
-public interface IApplicationContext
+namespace WebAPiDemo.Entities
 {
+    public abstract class BaseEntity
+    {
+        public int Id { get; set; }
+    }
 }
