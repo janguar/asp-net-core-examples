@@ -4,6 +4,11 @@
         <name>WebApiDemo</name>
     </assembly>
     <members>
+        <member name="T:WebApiDemo.Controllers.ControllerBase">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="T:WebApiDemo.Controllers.ValuesController">
             <summary>
             
@@ -26,6 +31,50 @@
             
             </summary>
             <param name="args"></param>
+        </member>
+        <member name="T:WebApiDemo.Swagger.AuthResponseOperationFilter">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebApiDemo.Swagger.AuthResponseOperationFilter.#ctor(Microsoft.AspNetCore.Authorization.IAuthorizationPolicyProvider)">
+            <summary>
+            
+            </summary>
+            <param name="authorizationPolicyProvider"></param>
+        </member>
+        <member name="M:WebApiDemo.Swagger.AuthResponseOperationFilter.Apply(Microsoft.OpenApi.Models.OpenApiOperation,Swashbuckle.AspNetCore.SwaggerGen.OperationFilterContext)">
+            <summary>
+            
+            </summary>
+            <param name="operation"></param>
+            <param name="context"></param>
+        </member>
+        <member name="M:WebApiDemo.Swagger.AuthResponseOperationFilter.GetResponse(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="description"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WebApiDemo.Swagger.DefaultResponseOperationFilter">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebApiDemo.Swagger.DefaultResponseOperationFilter.Apply(Microsoft.OpenApi.Models.OpenApiOperation,Swashbuckle.AspNetCore.SwaggerGen.OperationFilterContext)">
+            <summary>
+            
+            </summary>
+            <param name="operation"></param>
+            <param name="context"></param>
+        </member>
+        <member name="M:WebApiDemo.Swagger.DefaultResponseOperationFilter.GetResponse(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="description"></param>
+            <returns></returns>
         </member>
     </members>
 </doc>
