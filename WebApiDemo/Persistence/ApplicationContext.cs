@@ -1,10 +1,11 @@
 ﻿
 using Microsoft.EntityFrameworkCore;
+using WebApiDemo.Contracts;
 using WebAPiDemo.Entities;
 
 namespace WebApiDemo.Persistence
 {
-    public class ApplicationContext : DbContext
+    public class ApplicationContext : DbContext, IApplicationContext
     {
         public DbSet<ItemEntity> Items { get; set; }
         public ApplicationContext(DbContextOptions<ApplicationContext> options) : base(options)
@@ -24,7 +25,10 @@ namespace WebApiDemo.Persistence
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("./database.db");
+            // https://www.connectionstrings.com/sqlite/
+            var con = "Data Source=./database.db";
+
+            optionsBuilder.UseSqlite(con);
 
             base.OnConfiguring(optionsBuilder);
         }

@@ -1,17 +1,16 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
-using Microsoft.Extensions.Options;
-using Microsoft.Net.Http.Headers;
 using Microsoft.OpenApi.Any;
 using Microsoft.OpenApi.Models;
-using System.Reflection;
 using System.Text.Json.Serialization;
-using WebApiDemo.Abstractions.Context;
+using WebApiDemo.Contracts;
 using WebApiDemo.Persistence;
 using WebApiDemo.Swagger;
 
 namespace WebApiDemo
 {
+
+
     /// <summary>
     /// 
     /// </summary>
@@ -25,6 +24,8 @@ namespace WebApiDemo
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            //builder.WebHost.UseUrls("http://localhost:4000");
+
             //builder.Host.ConfigureAppConfiguration((con) =>
             //{
             //    con.AddJsonFile("appsettings.local.json", optional: true);
@@ -32,26 +33,35 @@ namespace WebApiDemo
 
             // Add services to the container.
 
+            builder.Services.AddCors();
+
             builder.Services.AddHttpContextAccessor();
 
             builder.Services.AddControllers()
-            .AddJsonOptions(options =>
+            .AddJsonOptions(option =>
             {
-                options.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingDefault;
+                // serialize enums as strings in api responses (e.g. Role)
+                option.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()); 
+
+                option.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingDefault;
             });
 
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
 
 
-            var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-            //builder.Services.AddDbContext<IApplicationDbContext, ApplicationDbContext>(options =>
-            //{
-            //    options.UseSqlServer(connectionString, providerOptions =>
-            //    {
-            //        providerOptions.UseQuerySplittingBehavior(QuerySplittingBehavior.SplitQuery);
-            //    });
-            //});
+            var connectionString = builder.Configuration.GetConnectionString("SQLiteConnection"); 
+
+            builder.Services.AddDbContext<IApplicationContext, ApplicationContext>(option =>
+            {
+                //options.UseSqlServer(connectionString, providerOptions =>
+                //{
+                //    providerOptions.UseQuerySplittingBehavior(QuerySplittingBehavior.SplitQuery);
+                //});
+
+                option.UseSqlite(connectionString);
+
+            });
 
 
             #region Swagger
@@ -129,6 +139,14 @@ namespace WebApiDemo
 
             }
 
+
+            // global cors policy
+            app.UseCors(x => x
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader());
+
+
             app.UseStaticFiles(new StaticFileOptions()
             {
                 // TODO: create if not exist
@@ -139,6 +157,10 @@ namespace WebApiDemo
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
+
+            // global error handler
+            //app.UseMiddleware<ErrorHandlerMiddleware>();
+
 
             app.MapControllers();
 

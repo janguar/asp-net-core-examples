@@ -4,11 +4,6 @@
         <name>WebApiDemo</name>
     </assembly>
     <members>
-        <member name="T:WebApiDemo.Controllers.ControllerBase">
-            <summary>
-            
-            </summary>
-        </member>
         <member name="T:WebApiDemo.Controllers.ValuesController">
             <summary>
             
@@ -31,6 +26,11 @@
             
             </summary>
             <param name="args"></param>
+        </member>
+        <member name="T:WebApiDemo.Services.ItemEntityService">
+            <summary>
+            
+            </summary>
         </member>
         <member name="T:WebApiDemo.Swagger.AuthResponseOperationFilter">
             <summary>
@@ -75,6 +75,31 @@
             </summary>
             <param name="description"></param>
             <returns></returns>
+        </member>
+        <member name="T:WebAPiDemo.Entities.ItemEntity">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:WebAPiDemo.Entities.ItemEntity._id">
+            <summary>
+            Gets or sets the id.  
+            </summary>
+        </member>
+        <member name="P:WebAPiDemo.Entities.ItemEntity.Id">
+            <summary>
+            Gets or sets the id.  
+            </summary> 
+        </member>
+        <member name="F:WebAPiDemo.Entities.ItemEntity._description">
+            <summary>
+            Gets or sets the description.  
+            </summary>
+        </member>
+        <member name="P:WebAPiDemo.Entities.ItemEntity.Description">
+            <summary>
+            Gets or sets the description.  
+            </summary> 
         </member>
     </members>
 </doc>
